@@ -11,3 +11,11 @@ $ ruby runner.rb
 ```
 
 Type `?` to get a list of available commands at runtime.
+
+## Running tests
+
+Everything is tested using Minitest, triggered by Rake:
+
+```sh
+bundle exec rake
+```
