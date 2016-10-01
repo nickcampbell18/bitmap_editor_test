@@ -37,11 +37,11 @@ describe Grid do
     end
 
     it 'should not overflow if given row is out of range' do
-      grid = Grid.new(3, 3)
+      grid = Grid.new(3, 5)
       err = assert_raises(ArgumentError) do
         grid[3, 0]
       end
-      assert_equal 'Row 0 is out of range (3 rows available)', err.message
+      assert_equal 'Row 0 is out of range (5 rows available)', err.message
     end
 
     it 'should not overflow on negative rows' do
@@ -54,7 +54,7 @@ describe Grid do
 
   describe '#write' do
     before do
-      @grid = Grid.new(3, 3)
+      @grid = Grid.new(3, 4)
     end
 
     it 'should colour the first cell' do
@@ -89,7 +89,7 @@ describe Grid do
 
   describe '#vertical_stripe' do
     before do
-      @grid = Grid.new(5, 5)
+      @grid = Grid.new(6, 5)
     end
 
     it 'should paint the central cell' do
@@ -118,7 +118,7 @@ describe Grid do
 
   describe '#horizontal_stripe' do
     before do
-      @grid = Grid.new(5, 5)
+      @grid = Grid.new(5, 6)
     end
 
     it 'should paint the central cell' do
@@ -172,7 +172,23 @@ describe Grid do
       grid[1, 3] = 'D'
       grid[2, 2] = 'R'
       grid[3, 3] = 'E'
-      assert_equal "OOD\nORO\nOOE", grid.print
+      assert_equal "OOO\nORO\nDOE", grid.print
+    end
+
+    it 'should print a complex grid with three stripes' do
+      grid = Grid.new(5, 6)
+      grid.horizontal_stripe(2, 2, 5, 'H')
+      grid.vertical_stripe(4, 1, 5, 'V')
+      grid.horizontal_stripe(5, 1, 4, 'P')
+
+      assert_equal <<-OUT.chomp, grid.print
+OOOVO
+OHHVH
+OOOVO
+OOOVO
+PPPPO
+OOOOO
+OUT
     end
 
     it 'also accepts the shorthand #to_s' do

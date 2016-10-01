@@ -56,7 +56,7 @@ class Grid
     check_range(col, row)
     x = col - 1
     y = row - 1
-    x * @cols + y
+    x + (y * @cols)
   end
 
   def check_range(col, row)
