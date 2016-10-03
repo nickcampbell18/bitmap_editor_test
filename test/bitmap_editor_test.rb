@@ -133,5 +133,14 @@ describe BitmapEditor do
         assert_equal "Error: Unrecognised command `R`\n", message
       end
     end
+
+    describe 'input with leading, embedded and trailing whitespace' do
+      it 'should remove all whitespace and initialize a grid' do
+        @editor.handle_input('  I  3  4  ')
+
+        assert @editor.grid
+        assert @editor.grid[3, 4]
+      end
+    end
   end
 end
