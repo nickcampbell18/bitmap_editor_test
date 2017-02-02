@@ -12,16 +12,15 @@ GEM
     pry-byebug (3.4.0)
       byebug (~> 9.0)
       pry (~> 0.10)
-    rake (11.3.0)
     slop (3.6.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  minitest
-  pry-byebug
-  rake
+  minitest (~> 5.9)
+  pry-byebug (~> 3.4)
+  rake (~> 12.0)
 
 BUNDLED WITH
-   1.12.5
+   1.13.7
