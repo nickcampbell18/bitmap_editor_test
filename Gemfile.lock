@@ -19,9 +19,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  minitest
-  pry-byebug
-  rake
+  minitest (~> 5.9)
+  pry-byebug (~> 3.4)
+  rake (~> 11.3)
 
 BUNDLED WITH
-   1.12.5
+   1.13.7
