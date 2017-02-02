@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'pry-byebug'
+gem 'pry-byebug', '~> 3.4'
 
 group :test do
-  gem 'minitest'
-  gem 'rake'
+  gem 'minitest', '~> 5.9'
+  gem 'rake', '~> 11.3'
 end
