@@ -12,7 +12,6 @@ GEM
     pry-byebug (3.4.0)
       byebug (~> 9.0)
       pry (~> 0.10)
-    rake (11.3.0)
     slop (3.6.0)
 
 PLATFORMS
