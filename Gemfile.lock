@@ -1,27 +1,16 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    byebug (9.0.5)
-    coderay (1.1.1)
-    method_source (0.8.2)
     minitest (5.9.1)
-    pry (0.10.4)
-      coderay (~> 1.1.0)
-      method_source (~> 0.8.1)
-      slop (~> 3.4)
-    pry-byebug (3.4.0)
-      byebug (~> 9.0)
-      pry (~> 0.10)
     rake (11.3.0)
-    slop (3.6.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  minitest
-  pry-byebug
-  rake
+  minitest (~> 5.9)
+  pry-byebug (~> 3.4)
+  rake (~> 11.3)
 
 BUNDLED WITH
-   1.12.5
+   1.13.7
